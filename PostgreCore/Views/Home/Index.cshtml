@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PostgreCore.Models.ProdSearchable>
+﻿@model IEnumerable<PostgreCore.Models.Employee>
 @{
     ViewData["Title"] = "Index";
 }
@@ -21,7 +21,10 @@
                     @item.Id
                 </td>
                 <td>
-                    @item.SearchColumn
+                    @item.Name
+                </td>
+                <td>
+                    @item.Age
                 </td>
             </tr>
         }

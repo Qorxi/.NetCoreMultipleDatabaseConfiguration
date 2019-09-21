@@ -21,7 +21,7 @@ namespace PostgreCore.Controllers
 
         public IActionResult Index()
         {
-            var list = dBContext.ProdSearchables.ToList();
+            var list = dBContext.Employees.ToList();
             return View(list);
         }
 
@@ -33,9 +33,9 @@ namespace PostgreCore.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(PostgreCore.Models.ProdSearchable model)
+        public IActionResult Create(PostgreCore.Models.Employee model)
         {
-            dBContext.ProdSearchables.Add(model);
+            dBContext.Employees.Add(model);
             dBContext.SaveContextChanges();
             return RedirectToAction("Index");
         }
