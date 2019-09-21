@@ -15,7 +15,7 @@ namespace PostgreCore.Contexts
 
         public override void SaveContextChanges()
         {
-            this.SaveChanges();
+            base.SaveChanges();
         }
     }
 }
