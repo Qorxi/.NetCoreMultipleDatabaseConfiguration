@@ -8,7 +8,7 @@ using PostgreCore.Models;
 
 namespace PostgreCore.Contexts
 {
-    public class PostgreSqlDatabaseContext : AppDbContext, IDBContext
+    public class PostgreSqlDatabaseContext : AppDbContext, IDbContext
     {
         public PostgreSqlDatabaseContext(DbContextOptions<PostgreSqlDatabaseContext> options) : base(options)
         {

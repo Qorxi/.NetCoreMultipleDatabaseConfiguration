@@ -9,7 +9,7 @@ using PostgreCore.Models;
 
 namespace PostgreCore.DataBaseContexts
 {
-    public partial interface IDBContext : IDbSetContexts, IDbContextChanges
+    public partial interface IDbContext : IDbSetContexts, IDbContextChanges
     {
          DatabaseFacade DataBase { get;}
     }

@@ -10,7 +10,7 @@ using PostgreCore.Models;
 
 namespace PostgreCore.Contexts
 {
-    public abstract class AppDbContext : DbContext, PostgreCore.DataBaseContexts.IDBContext
+    public abstract class AppDbContext : DbContext, PostgreCore.DataBaseContexts.IDbContext
     {
         protected AppDbContext(DbContextOptions options) : base(options)
         {

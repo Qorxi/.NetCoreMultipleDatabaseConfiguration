@@ -11,9 +11,9 @@ namespace PostgreCore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IDBContext dBContext = null;
+        private readonly IDbContext dBContext = null;
 
-        public HomeController(IDBContext dbcontex)
+        public HomeController(IDbContext dbcontex)
         {
             dBContext = dbcontex;
         }

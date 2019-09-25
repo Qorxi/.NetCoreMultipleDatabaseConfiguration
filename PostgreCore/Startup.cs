@@ -36,7 +36,7 @@ namespace PostgreCore
                 options.UseSqlServer(Configuration.GetConnectionString("MSSQLConnection"));
             });
 
-            services.AddSingleton<PostgreCore.DataBaseContexts.IDBContext, PostgreCore.Contexts.MSSQLDatabaseContext>();
+            services.AddSingleton<PostgreCore.DataBaseContexts.IDbContext, PostgreCore.Contexts.PostgreSqlDatabaseContext>();
 
             services.AddMvc();
         }
