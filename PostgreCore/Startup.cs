@@ -31,12 +31,12 @@ namespace PostgreCore
                 options.UseNpgsql(Configuration.GetConnectionString("PostGreConnection"));
             });
 
-            services.AddEntityFrameworkNpgsql().AddDbContextPool<PostgreCore.Contexts.MSSQLDatabaseContext>(options =>
+            services.AddDbContextPool<PostgreCore.Contexts.MSSQLDatabaseContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("MSSQLConnection"));
             });
 
-            services.AddSingleton<PostgreCore.DataBaseContexts.IDbContext, PostgreCore.Contexts.PostgreSqlDatabaseContext>();
+            services.AddSingleton<PostgreCore.DataBaseContexts.IDbContext, PostgreCore.Contexts.MSSQLDatabaseContext>();
 
             services.AddMvc();
         }

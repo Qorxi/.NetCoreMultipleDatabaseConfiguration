@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PostgreCore.Contexts
 {
-    public class MSSQLDatabaseContext : AppDbContext
+    public sealed class MSSQLDatabaseContext : AppDbContext
     {
         public MSSQLDatabaseContext(DbContextOptions<MSSQLDatabaseContext> options) : base(options)
         {
